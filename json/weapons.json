@@ -1,0 +1,47 @@
+{
+	"weapons": [
+		{
+			"id": 1,
+			"name": "Club",
+			"min_dmg": 1,
+			"max_dmg": 6,
+			"value": 40
+		},
+		{
+			"id": 2,
+			"name": "Dagger",
+			"min_dmg": 1,
+			"max_dmg": 4,
+			"value": 20
+		},
+		{
+			"id": 3,
+			"name": "Quarterstaff",
+			"min_dmg": 1,
+			"max_dmg": 6,
+			"value": 40
+		},
+		{
+			"id": 4,
+			"name": "Short Sword",
+			"min_dmg": 1,
+			"max_dmg": 6,
+			"value": 80
+		},
+		{
+			"id": 5,
+			"name": "Long Sword",
+			"min_dmg": 1,
+			"max_dmg": 8,
+			"value": 150
+		},
+		{
+			"id": 6,
+			"name": "Mace",
+			"min_dmg": 2,
+			"max_dmg": 7,
+			"value": 100
+		}
+
+	]
+}

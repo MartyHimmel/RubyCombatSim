@@ -1,0 +1,33 @@
+{
+	"classes": [
+		{
+			"id": 1,
+			"name": "Fighter",
+			"starting_hp": 10,
+			"starting_weapon": "Long Sword",
+			"starting_armor": "Chain Mail"
+		},
+		{
+			"id": 2,
+			"name": "Mage",
+			"starting_hp": 4,
+			"starting_weapon": "Quarterstaff",
+			"starting_armor": "None",
+			"starting_spell": "Magic Missile"
+		},
+		{
+			"id": 3,
+			"name": "Thief",
+			"starting_hp": 6,
+			"starting_weapon": "Dagger",
+			"starting_armor": "Leather Armor"
+		},
+		{
+			"id": 4,
+			"name": "Cleric",
+			"starting_hp": 8,
+			"starting_weapon": "Mace",
+			"starting_armor": "Chain Mail"
+		}
+	]
+}

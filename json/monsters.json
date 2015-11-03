@@ -1,0 +1,47 @@
+{
+	"monsters": [
+		{
+			"id": 1,
+			"name": "Goblin",
+			"max_hp": 4,
+			"attack1": "stabs with a dagger",
+			"attack1_min_dmg": 1,
+			"attack1_max_dmg": 4,
+			"exp_value": 12,
+			"gold_value": 18
+		},
+		{
+			"id": 2,
+			"name": "Orc",
+			"max_hp": 8,
+			"attack1": "slashes with a long sword",
+			"attack1_min_dmg": 1,
+			"attack1_max_dmg": 8,
+			"exp_value": 15,
+			"gold_value": 30
+		},
+		{
+			"id": 3,
+			"name": "Gnoll",
+			"max_hp": 6,
+			"attack1": "strikes with a halberd",
+			"attack1_min_dmg": 2,
+			"attack1_max_dmg": 8,
+			"exp_value": 35,
+			"gold_value": 80
+		},
+		{
+			"id": 4,
+			"name": "Dragon",
+			"max_hp": 96,
+			"attack1": "swipes with its claws",
+			"attack1_min_dmg": 2,
+			"attack1_max_dmg": 12,
+			"attack2": "exhales flaming breath",
+			"attack2_min_dmg": 7,
+			"attack2_max_dmg": 27,
+			"exp_value": 4000,
+			"gold_value": 10000
+		}
+	]
+}

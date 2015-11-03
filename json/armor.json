@@ -1,0 +1,64 @@
+{
+	"armor": [
+		{
+			"id": 0,
+			"name": "None",
+			"defense": 0,
+			"value": 0
+		},
+		{
+			"id": 1,
+			"name": "Leather Armor",
+			"defense": 2,
+			"value": 80
+		},
+		{
+			"id": 2,
+			"name": "Studded Leather Armor",
+			"defense": 3,
+			"value": 200
+		},
+		{
+			"id": 3,
+			"name": "Scale Mail",
+			"defense": 4,
+			"value": 500
+		},
+		{
+			"id": 4,
+			"name": "Chain Mail",
+			"defense": 5,
+			"value": 900
+		},
+		{
+			"id": 5,
+			"name": "Splint Mail",
+			"defense": 6,
+			"value": 1200
+		},
+		{
+			"id": 6,
+			"name": "Plate Mail",
+			"defense": 7,
+			"value": 3000
+		},
+		{
+			"id": 7,
+			"name": "Field Plate",
+			"defense": 8,
+			"value": 6000
+		},
+		{
+			"id": 8,
+			"name": "Full Plate",
+			"defense": 9,
+			"value": 10000
+		},
+		{
+			"id": 9,
+			"name": "Shield",
+			"defense": 1,
+			"value": 100
+		}
+	]
+}
