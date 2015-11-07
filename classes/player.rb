@@ -76,7 +76,20 @@ class Player
 			end
 		end
 
+		@level = 1
 		self.set_hp
+	end
+
+	# Sets the character's class based on given class name.
+	# Used for loading a saved character.
+	def set_class_by_name(name)
+		character_classes = self.get_list_of_classes
+		character_classes.each do |character_class|
+			if (character_class['name'].eql?(name))
+				@character_class = character_class
+				break
+			end
+		end
 	end
 
 	# Set max and current hit points based on class
@@ -162,7 +175,9 @@ class Player
 		puts "\n|".concat("-" * 31).concat("|")
 		puts "|%-14s %16s|" % ["Name:", "#{@name}"]
 		puts "|%-14s %16s|" % ["Class:", "#{@character_class['name']}"]
+		puts "|%-14s %16s|" % ["Level:", "#{@level}"]
 		puts "|%-14s %16s|" % ["Weapon:", "#{@weapon.name}"]
+		puts "|%-14s %16s|" % ["Armor:", "#{@armor.name}"]
 		puts "|%-14s %16s|" % ["HP:", "#{@hit_points}"]
 		puts "|%-14s %16s|" % ["Damage:", "#{@weapon.min_dmg}-#{@weapon.max_dmg}"]
 		puts "|%-14s %16s|" % ["Defense:", "#{@armor.defense}"]

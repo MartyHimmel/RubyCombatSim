@@ -1,6 +1,6 @@
 class Weapon
 
-	attr_reader :name, :min_dmg, :max_dmg, :value
+	attr_reader :id, :name, :min_dmg, :max_dmg, :value
 
 	def initialize(id)
 		file = File.read('json/weapons.json')
@@ -9,6 +9,7 @@ class Weapon
 
 		for weapon in weapons_list do
 			if id == weapon['id']
+				@id = id
 				@name = weapon['name']
 				@min_dmg = weapon['min_dmg']
 				@max_dmg = weapon['max_dmg']

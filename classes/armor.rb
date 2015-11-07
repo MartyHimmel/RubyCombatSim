@@ -1,6 +1,6 @@
 class Armor
 
-	attr_reader :name, :defense, :value
+	attr_reader :id, :name, :defense, :value
 
 	def initialize(id)
 		file = File.read('json/armor.json')
@@ -9,6 +9,7 @@ class Armor
 
 		for armor in armor_list do
 			if id == armor['id']
+				@id = id
 				@name = armor['name']
 				@defense = armor['defense']
 				@value = armor['value']
