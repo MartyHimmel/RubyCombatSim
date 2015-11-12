@@ -100,7 +100,7 @@ class Player
 
 	# Confirm the character class
 	def class_confirmed?
-		puts "\nYour chose #{@character_class['name']}. Is that correct (Y/N)?"
+		puts "\nYou chose #{@character_class['name']}. Is that correct (Y/N)?"
 		confirm = gets.strip.upcase
 		case confirm
 			when "Y"

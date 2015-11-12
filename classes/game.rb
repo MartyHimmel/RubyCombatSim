@@ -223,7 +223,7 @@ class Game
 			file.write("armor=#{@player.armor.id}")
 		end
 
-		puts "Your character has been saved."
+		puts "\nYour character has been saved."
 	end
 
 	def load_character
@@ -249,7 +249,7 @@ class Game
 		@player.weapon = Weapon.new(data['weapon'].to_i)
 		@player.armor = Armor.new(data['armor'].to_i)
 
-		puts "#{@player.name} has been successfully loaded."
+		puts "\n#{@player.name} has been successfully loaded."
 	end
 
 end

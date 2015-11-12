@@ -5,7 +5,5 @@ The purpose of this code was to learn Ruby. It's an extremely basic text based R
 
 #### Future Plans (Maybe)
 Future additions may include (depending on how long I work on this):
-* Some sort of healing or rest system to recover HP
-* Saving and loading characters
-* A shop option to upgrade equipment
+* A shop option to upgrade equipment (in the works)
 * Leveling system so the player isn't eternally a level 1 noob
