@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'json'
 require 'fileutils'
 
@@ -13,18 +15,14 @@ game = Game.new
 game.start_game
 
 # Check if it's a new player
-if (game.player == nil)
-	#Create a new player
-	game.get_player_name
-	while !game.player.name_confirmed? do
-		game.get_player_name
-	end
+if game.player.nil?
+  # Create a new player
+  game.player_name
+  game.player_name until game.player.name_confirmed?
 
-	# Select a class
-	game.player.choose_class
-	while !game.player.class_confirmed? do
-		game.player.choose_class
-	end
+  # Select a class
+  game.player.choose_class
+  game.player.choose_class until game.player.class_confirmed?
 end
 
 # Check if the user wants to keep playing
