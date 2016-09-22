@@ -1,3 +1,4 @@
+# Player character and interactions
 class Player
   attr_accessor :character_class, :weapon, :armor, :max_hit_points,
                 :hit_points, :level, :experience, :gold

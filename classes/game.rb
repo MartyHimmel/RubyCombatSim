@@ -88,7 +88,8 @@ class Game
     if !@monster.alive?
       victory
     elsif !@player.alive?
-      puts "You have been slain by #{@monster.name}. Thanks for playing!"
+      puts "You have been slain by #{@monster.name}."
+      puts 'Thanks for playing!'
       exit
     end
   end
@@ -164,10 +165,10 @@ class Game
       combat_loop
 
     when 3 # Weapon shop
-      Shop.new('weapon')
+      weapon_shop
 
     when 4 # Armor shop
-      Shop.new('armor')
+      armor_shop
 
     when 5 # Rest
       rest
@@ -253,5 +254,31 @@ class Game
     @player.armor = Armor.new(data['armor'].to_i)
 
     puts "\n#{@player.name} has been successfully loaded."
+  end
+
+  def weapon_shop
+    shop = Shop.new('weapons')
+    shop.enter
+    item = shop.select_item
+    if shop.enough_gold?(item, @player)
+      @player.gold -= item['value']
+      @player.weapon = Weapon.new(item['id'])
+      puts 'Thank you!'
+    else
+      menu_action(3)
+    end
+  end
+
+  def armor_shop
+    shop = Shop.new('armor')
+    shop.enter
+    item = shop.select_item
+    if shop.enough_gold?(item, @player)
+      @player.gold -= item['value']
+      @player.armor = Armor.new(item['id'])
+      puts 'Thank you!'
+    else
+      menu_action(4)
+    end
   end
 end

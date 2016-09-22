@@ -1,26 +1,46 @@
+# Handles the various shops
 class Shop
-  attr_reader :shop_type
+  attr_reader :inventory, :shop_type
 
   def initialize(shop_type)
     @shop_type = shop_type
+
+    file = File.read("json/#{shop_type}.json")
+    json = JSON.parse(file)
+    @inventory = json[shop_type]
   end
 
-  def get_shop(type)
-    case type
-    when 'weapon'
-      weapon_shop
-    when 'armor'
-      armor_shop
-    else
-      puts 'Wrong type of shop'
+  def greeting
+    puts "\nWelcome to the #{@shop_type} shop."
+    puts 'What are you interested in?'
+  end
+
+  def choices
+    @inventory.each do |item|
+      printf("%3s: %-25s %8d gold\n", item['id'], item['name'], item['value'])
     end
   end
 
-  def weapon_shop
-    puts "\nWelcome to the weapon shop."
+  def enter
+    greeting
+    choices
   end
 
-  def armor_shop
-    puts "\nWelcome to the armor shop."
+  def select_item
+    choice = gets.strip.to_i
+    @inventory.each do |item|
+      next unless item['id'] == choice
+      @item = item
+    end
+    @item
+  end
+
+  def enough_gold?(item, player)
+    if player.gold < item['value']
+      puts 'You don\'t have enough gold for that.'
+      return false
+    end
+
+    true
   end
 end
