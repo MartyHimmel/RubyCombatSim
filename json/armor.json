@@ -53,12 +53,6 @@
 			"name": "Full Plate",
 			"defense": 9,
 			"value": 10000
-		},
-		{
-			"id": 9,
-			"name": "Shield",
-			"defense": 1,
-			"value": 100
 		}
 	]
 }
